@@ -5,12 +5,14 @@
       <map>
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/drawable/button_shape.xml" value="0.3305" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/drawable/ic_getstarted_bg.xml" value="0.5" />
+        <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/drawable/icon_shape.xml" value="0.25" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/font/font.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/font/inder.xml" value="0.215625" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/font/inter_bold.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/font/roboto.xml" value="0.215625" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/layout/activity_create_account.xml" value="0.3625" />
         <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/layout/activity_get_started.xml" value="0.22" />
+        <entry key="..\:/Users/Empedocles/Documents/workspace/ahmet-furkan-sevim-odev2/app/src/main/res/layout/activity_welcome_back.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -6,4 +6,12 @@
     <string name="grow_together">Grow Together</string>
     <string name="big_image">Big Image</string>
     <string name="join_now">JOIN NOW</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="backgorund">backgorund</string>
+    <string name="back_button">back button</string>
+    <string name="enter_your_username_amp_password"><![CDATA[Enter Your Username & Password]]></string>
+    <string name="username">Username</string>
+    <string name="login">LOGIN</string>
+    <string name="forgotten_passwoard_nor_create_a_new_account">Forgotten Passwoard \nOr Create a New Account</string>
+    <string name="password">Password</string>
 </resources>
