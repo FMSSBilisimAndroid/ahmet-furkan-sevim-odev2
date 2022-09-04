@@ -12,8 +12,14 @@ class GetStartedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_get_started)
 
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_get_started)
+        launcher()
+
+    }
+    // Create all onClick Functions
+    private fun launcher() {
+        // Intent to welcomeback page
         binding.join.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, WelcomeBackActivity::class.java)
             startActivity(intent)

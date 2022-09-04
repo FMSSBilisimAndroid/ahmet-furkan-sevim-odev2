@@ -4,10 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.dag.odev2fmss.databinding.ActivityWelcomeBackBinding
+import java.text.Normalizer
 
 class WelcomeBackActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBackBinding
@@ -17,53 +16,33 @@ class WelcomeBackActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_welcome_back)
         launcher()
-
     }
 
-    private fun launcher(){
-        //binding.welcomebackUsername.background.setTint(ContextCompat.getColor(this, R.color.error))
+    // Create all OnClick Functions
+    private fun launcher() {
+        // Intent to previous page
         binding.backIcon.setOnClickListener {
             val intent = Intent(this, GetStartedActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent)
         }
 
-        binding.createAccount.setOnClickListener{
+        // Intent to create account page
+        binding.createAccount.setOnClickListener {
             val intent = Intent(this, CreateAccountActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent)
         }
 
+        // Sign in
         binding.welcomebackLogin.setOnClickListener(View.OnClickListener {
-            val username = binding.welcomebackUsername.text
-            val password = binding.welcomebackPassword.text
+            val username = binding.welcomebackUsername
+            val password = binding.welcomebackPassword
 
-            val isUserNameEmpty = username.isEmpty()
-            val isPasswordEmpty = password.isEmpty()
+            FormHelper.editTextTintChange(username, this)
+            FormHelper.editTextTintChange(password, this)
+            FormHelper.isFormEmpty(this, username.text, password.text)
 
-            if (isUserNameEmpty){
-                binding.welcomebackUsername.background.setTint(ContextCompat.getColor(this, R.color.error))
-            }else{
-                binding.welcomebackUsername.background.setTint(ContextCompat.getColor(this, R.color.black))
-            }
-
-            if(isPasswordEmpty){
-                binding.welcomebackPassword.background.setTint(ContextCompat.getColor(this, R.color.error))
-            }else{
-                binding.welcomebackPassword.background.setTint(ContextCompat.getColor(this, R.color.black))
-            }
-
-            if(isPasswordEmpty || isUserNameEmpty){
-                Toast.makeText(this,"Username and Password not be empty", Toast.LENGTH_LONG).show()
-            }else{
-                if (username.toString().equals(User.USERNAME) && password.toString().equals(User.PASSWORD)){
-                    Toast.makeText(this, "Welcome back $username", Toast.LENGTH_LONG).show()
-                }else{
-                    Toast.makeText(this, "This user not exist", Toast.LENGTH_SHORT).show()
-                }
-            }
         })
     }
-
-
 }
