@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dag.odev2fmss"
     android:versionCode="1"
     android:versionName="1.0" >
@@ -18,13 +19,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Odev2FMSS" >
+        android:theme="@style/Theme.Odev2FMSS"
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name="com.dag.odev2fmss.CreateAccountActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name="com.dag.odev2fmss.GetStartedActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +41,9 @@
 
         <activity
             android:name="com.dag.odev2fmss.WelcomeBackActivity"
-            android:exported="false" >
+            android:exported="false"
+            android:screenOrientation="portrait"
+            >
         </activity>
 
         <meta-data
